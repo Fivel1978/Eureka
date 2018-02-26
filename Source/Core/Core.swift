@@ -701,9 +701,9 @@ open class FormViewController: UIViewController, FormViewControllerProtocol, For
 
     open func rowsHaveBeenAdded(_ rows: [BaseRow], at indexes: [IndexPath]) {
         guard animateTableView else { return }
-        tableView?.beginUpdates()
+//        tableView?.beginUpdates()
         tableView?.insertRows(at: indexes, with: insertAnimation(forRows: rows))
-        tableView?.endUpdates()
+//        tableView?.endUpdates()
     }
 
     open func rowsHaveBeenRemoved(_ rows: [BaseRow], at indexes: [IndexPath]) {

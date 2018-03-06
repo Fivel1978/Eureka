@@ -22,6 +22,12 @@ open class RevealedSection<Row: SelectableRowType> : SelectableSection<Row> wher
     self.selectionType = selectionType
     self.tag = tag
   }
+
+  #if swift(>=4.1)
+  public required init<S>(_ elements: S) where S : Sequence, S.Element == BaseRow {
+    super.init(elements)
+  }
+  #endif
   
   public required init() {
     fatalError("init() has not been implemented")
